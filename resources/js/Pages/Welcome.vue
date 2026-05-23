@@ -178,12 +178,12 @@ watch([plan, amount, extended], simulate, {
                                focus:ring-cyan-400"
                     />
 
-                    <p
-                        v-if="amountError"
-                        class="text-red-400 text-sm mt-2"
-                    >
-                        {{ amountError }}
-                    </p>
+                     <p
+        v-if="amount < 100 || amount > 5000000"
+        class="text-red-500 text-sm mt-2"
+    >
+        Please enter an amount between ₹100 and ₹50,00,000.
+    </p>
                 </div>
 
                 <!-- TOGGLE -->
